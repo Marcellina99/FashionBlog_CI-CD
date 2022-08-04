@@ -8,11 +8,11 @@ services:
     depends_on:
       - mypostgresdb
     restart: on-failure
-    
+
   mypostgresdb:
     image: postgres
     ports:
-      - "5433:5432"
+      - "5432:5432"
     environment:
       - POSTGRES_PASSWORD=password
       - POSTGRES_USER=postgres
