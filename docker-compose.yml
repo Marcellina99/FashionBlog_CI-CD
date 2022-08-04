@@ -7,10 +7,12 @@ services:
       - "8080:8080"
     depends_on:
       - mypostgresdb
+    restart: on-failure
+    
   mypostgresdb:
     image: postgres
     ports:
-      - "5433:5430"
+      - "5433:5432"
     environment:
       - POSTGRES_PASSWORD=password
       - POSTGRES_USER=postgres
