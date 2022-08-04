@@ -10,7 +10,7 @@ services:
   mypostgresdb:
     image: postgres
     ports:
-      - "5433:5432"
+      - "5433:5430"
     environment:
       - POSTGRES_PASSWORD=password
       - POSTGRES_USER=postgres
